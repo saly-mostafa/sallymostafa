@@ -9,6 +9,14 @@ $subject5 = $_POST['fifth_subject'];
 $degreesagual =  $subject1 +$subject2 + $subject3 + $subject4 + $subject5 ;
 
 define('maxdgree',500);
+// switch ($subject1 || $subject2 || $subject3 || $subject4 || $subject5 ){
+// case $subject1 || $subject2 || $subject3 || $subject4 || $subject5 < 0 || $subject1 || $subject2 || $subject3 || $subject4 || $subject5 >maxdgree :
+//   echo "enter correct dgree";
+//   break ;
+//   default:
+//   echo "enter dgree";
+// } 
+
 $dgreeper = ( $degreesagual / 500) * 100 ;
 
 
@@ -61,6 +69,16 @@ $dgreeper = ( $degreesagual / 500) * 100 ;
 
                     <button class="col-12 btn btn-outline-info rounded btn-sm"> Get  The GRADE </button><br><br>
                     <?php
+                    switch ($subject1 || $subject2 || $subject3 || $subject4 || $subject5 ){
+                      case $subject1 || $subject2 || $subject3 || $subject4 || $subject5 < 0 || $subject1 || $subject2 || $subject3 || $subject4 || $subject5 >maxdgree :
+                        echo "enter correct dgree";
+                        break ;
+                        default:
+                        echo "enter dgree";
+                      } 
+
+
+
                      if(isset ( $degreesagual ) ){
                      echo  "The  Student Total  Dgrees Is  : ". ' ' . $degreesagual ;
                      }
